@@ -1,0 +1,32 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: saas-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+      - DJANGO_SECRET_KEY=a3a67a1c5131835646e47ef1413e7f635fe8493778c7c5edb1f2457cd91189e7cbd3643e32b00bbd58abc3e342f141fa44e5
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+  frontend:
+    build:
+      context: ./frontend
+    container_name: saas-frontend
+    ports:
+      - "3000:3000"
+  db:
+    image: postgres:13
+    container_name: saas-db
+    environment:
+      - POSTGRES_DB=saas_db
+      - POSTGRES_USER=krimo
+      - POSTGRES_PASSWORD=Elkrymy@93
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data

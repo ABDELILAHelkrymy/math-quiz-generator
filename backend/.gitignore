@@ -1,0 +1,72 @@
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# Local development settings (created by `manage.py runserver`)
+*.db.sqlite3
+*.sqlite3
+db.sqlite3
+db.sqlite3-journal
+
+# Static files
+/static/
+
+# Media files
+/media/
+
+# Virtual environment
+env/
+
+# Secret key (keep your Django secret key secret)
+*.secret_key
+
+# Log files
+*.log
+
+# Environment-specific files (e.g., .env)
+.env
+
+# Ignore generated migrations (you can customize this)
+**/migrations/*.py
+**/migrations/*.pyc
+
+# Ignore any local configuration files (e.g., settings/local.py)
+**/local.py
+
+# Ignore database backups and dumps
+*.dump
+*.sql
+*.db
+
+# Ignore compiled JavaScript (if applicable)
+*.js
+
+# Ignore generated HTML files (if applicable)
+*.html
+
+# Ignore IDE-specific files and directories (e.g., .vscode, .idea)
+.vscode/
+.idea/
+
+# Ignore system and temporary files
+.DS_Store
+Thumbs.db
+*~
+
+# Ignore configuration files
+*.config
+
+# Ignore package management files (e.g., pipenv or poetry)
+Pipfile
+Pipfile.lock
+pyproject.toml
+
+# Ignore coverage report files (if using a test coverage tool)
+.coverage
+htmlcov/
+
+# Ignore system-specific files
+*.swp
+
+# Ignore custom files or directories specific to your project
+# Add your custom files or directories here as needed
